@@ -445,8 +445,10 @@ export default function Home() {
               }}
 
               onBeforeInit={(swiper) => {
-                swiper.params.navigation.prevEl = ".custom-prev";
-                swiper.params.navigation.nextEl = ".custom-next";
+                if (swiper.params.navigation && typeof swiper.params.navigation !== "boolean") {
+                  swiper.params.navigation.prevEl = ".custom-prev";
+                  swiper.params.navigation.nextEl = ".custom-next";
+                }
               }}
               breakpoints={{
                 0: { slidesPerView: 1.25 },
@@ -503,8 +505,10 @@ export default function Home() {
                 nextEl: ".custom-next",
               }}
               onBeforeInit={(swiper) => {
-                swiper.params.navigation.prevEl = ".custom-prev";
-                swiper.params.navigation.nextEl = ".custom-next";
+                if (swiper.params.navigation && typeof swiper.params.navigation !== "boolean") {
+                  swiper.params.navigation.prevEl = ".custom-prev";
+                  swiper.params.navigation.nextEl = ".custom-next";
+                }
               }}
               className="w-full"
             >
