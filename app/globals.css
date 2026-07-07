@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+.background-gradient {
+ background: linear-gradient(270deg, #000000 0%, #003A3A 26.74%, #C1ACFF 102.67%);
+
+}
+
+.followus-gradient{
+  background: linear-gradient(90deg, #FF864D 0%, #A82502 100%);
+
+}
+
+.moving-object{
+  animation: moveUpDown 2s infinite alternate ease-in-out;
+}
+
+@keyframes moveUpDown {
+  from { transform: translateY(0); }
+  to { transform: translateY(-20px); }
+}
